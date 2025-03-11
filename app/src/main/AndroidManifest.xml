@@ -13,7 +13,8 @@
         android:theme="@style/Theme.SnakeGame"
         tools:targetApi="31">
 
-        <activity android:name=".GameActivity" />
+        <activity android:name=".GameActivity"
+            android:theme="@style/Theme.SnakeGame.ActionBar" />
         <activity
             android:name=".HomeActivity"
             android:exported="true">

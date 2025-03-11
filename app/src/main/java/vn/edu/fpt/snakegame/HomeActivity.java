@@ -1,6 +1,7 @@
 package vn.edu.fpt.snakegame;
 
 import androidx.appcompat.app.AppCompatActivity;
+
 import android.app.Dialog;
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -16,6 +17,7 @@ import android.widget.TextView;
 public class HomeActivity extends AppCompatActivity {
 
     private SharedPreferences preferences;
+    private DatabaseHelper dbHelper;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,6 +25,7 @@ public class HomeActivity extends AppCompatActivity {
         setContentView(R.layout.activity_home);
 
         preferences = getSharedPreferences("SnakeGamePrefs", MODE_PRIVATE);
+        dbHelper = new DatabaseHelper(this);
 
         Button startGameBtn = findViewById(R.id.startGameBtn);
         Button settingsBtn = findViewById(R.id.settingsBtn);
@@ -51,8 +54,8 @@ public class HomeActivity extends AppCompatActivity {
 
         String difficulty = preferences.getString("difficulty", "normal");
 
-        int unlimitedHighScore = preferences.getInt("highScore_unlimited_" + difficulty, 0);
-        int limitedHighScore = preferences.getInt("highScore_limited_" + difficulty, 0);
+        int unlimitedHighScore = dbHelper.getHighScore("unlimited", difficulty);
+        int limitedHighScore = dbHelper.getHighScore("limited", difficulty);
 
         unlimitedHighScoreTV.setText("Unlimited Mode: " + unlimitedHighScore);
         limitedHighScoreTV.setText("Timed Mode: " + limitedHighScore);

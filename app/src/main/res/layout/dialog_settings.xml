@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="20dp"
+    android:background="@android:color/black">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Game Settings"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:textColor="@android:color/white"
+        android:gravity="center"
+        android:layout_marginBottom="20dp"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Difficulty Level:"
+        android:textSize="18sp"
+        android:textColor="@android:color/white"
+        android:layout_marginBottom="10dp"/>
+
+    <RadioGroup
+        android:id="@+id/difficultyGroup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginBottom="20dp">
+
+        <RadioButton
+            android:id="@+id/easyRadio"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Easy"
+            android:textColor="@android:color/white"
+            android:textSize="16sp"/>
+
+        <RadioButton
+            android:id="@+id/normalRadio"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Normal"
+            android:textColor="@android:color/white"
+            android:textSize="16sp"/>
+
+        <RadioButton
+            android:id="@+id/hardRadio"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Hard"
+            android:textColor="@android:color/white"
+            android:textSize="16sp"/>
+    </RadioGroup>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Snake Color:"
+        android:textSize="18sp"
+        android:textColor="@android:color/white"
+        android:layout_marginBottom="10dp"/>
+
+    <RadioGroup
+        android:id="@+id/colorGroup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginBottom="20dp">
+
+        <RadioButton
+            android:id="@+id/yellowRadio"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Yellow"
+            android:textColor="#FFEB3B"
+            android:textSize="16sp"/>
+
+        <RadioButton
+            android:id="@+id/greenRadio"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Green"
+            android:textColor="#4CAF50"
+            android:textSize="16sp"/>
+
+        <RadioButton
+            android:id="@+id/blueRadio"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Blue"
+            android:textColor="#2196F3"
+            android:textSize="16sp"/>
+    </RadioGroup>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center">
+
+        <Button
+            android:id="@+id/saveBtn"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Save"
+            android:textSize="16sp"
+            android:backgroundTint="@android:color/holo_green_light"
+            android:layout_marginEnd="5dp"/>
+
+        <Button
+            android:id="@+id/cancelBtn"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Cancel"
+            android:textSize="16sp"
+            android:backgroundTint="@android:color/darker_gray"
+            android:layout_marginStart="5dp"/>
+    </LinearLayout>
+</LinearLayout>
